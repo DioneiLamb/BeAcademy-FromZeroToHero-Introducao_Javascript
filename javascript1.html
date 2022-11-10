@@ -9,19 +9,161 @@
     <title>Javascript</title>
 </head>
 <body>
-    <h2>Boas práticas de codificação</h2>
+    
+    <h1>O que é <i>JavaScript</i></h1><hr>
     <p>
-        Como o <b><i>CSS</i></b>, os scripts escritos na linguagem <b><i>Javascript</i></b>, podem ser esctritos dentro do corpoda páginas ou no cabeçalho, porém essa prática pode deixar a página mais <b>lenta</b> (pois o navegador começa a ler as informações de cima pra baixo) e o usuário não gosta de esperar. <br>
-        O que podemos fazer é colocar esses scripts no <b><i>fim</i></b> da página, porém o <b><i>melhor do melhor</i></b> é colocar em um arquivo externo.
-
+        <b><i>JavaScript</i></b> (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional) que juntamente com <b><i>HTML</i></b> e <b><i>CSS</i></b>, é uma das três principais tecnologias da <b><i>World Wide Web</i></b>.
+    </p>
+    <p>        
+        <b><i>JavaScript</i></b> permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-la.
     </p>
     
-    <!-- poderia até ser assim mas de preferência só em um caso muito pontual.
-    <script>
+    <h2>Boas práticas de codificação</h2>
+    <p>
+        Como o <b><i>CSS</i></b>, os scripts escritos na linguagem <b><i>JavaScript</i></b>, podem ser esctritos dentro do corpoda páginas ou no cabeçalho, porém essa prática pode deixar a página mais <b>lenta</b> (pois o navegador começa a ler as informações de cima pra baixo) e o usuário não gosta de esperar.
+    </p>
+    <p>
+        O que podemos fazer é colocar esses scripts no <b><i>fim</i></b> da página, porém, o melhor seria colocar em um arquivo externo.
+    </p>
+
+    <h2>Tipos de dados em JavaScript</h2>
+    <p>
+        Para entender a sintaze é necessário seguir as regras de linguagem. A c ombinações de elementos e escrita, o conjunto de termos e expressões e os agrupamento de palavras.
+    </p>
+    
+    <!-- estilização da tabela colocada aqui só por preguiça de fazer um link externo =) -->
+    <style rel="stylesheet">
+        table, tr, td{
+            border:#000 solid 1px;
+            padding:1rem;
+            width: 75%;
+        }
+        td{
+            width:50%;
+            height:30px;
+        }
+        tr{
+            background-color:green;
+            color:#FFF;
+        }
+    </style>
+        <table>
+            <tr>
+                <td>Dados do tipo string
+                    <br>São cadeias de caracteres (textos)
+                    <b><i>Algumas regras especificas</i></b> tipo o uso das aspas
+                        " " aspas duplas NÃO podem conter aspas duplas dentro e SIM aspas simples
+                    <br>
+                        ' ' aspas simples simples podem conter aspas duplas dentro
+                    <br>
+                        ` ` crase pode conter tudo dentro, aspas simples e aspas duplas. Usado quando uma resposta muito longa. Pode quebrar as linhas com a crase.
+                </td>
+                <td>
+                    <ul>
+                        <li>console.log("Dionei "tem" coisas para fazer") </li>
+                        <li>VM349:1 Uncaught SyntaxError: missing ) after argument list</li>
+                        <br>    
+                        <li>console.log("Dionei 'tem' coisas para fazer")</li>
+                        <li>VM398:1 Dionei 'tem' coisas para fazer</li>
+                        <br>
+                        <li>console.log('Dionei "tem" coisas para fazer')</li>
+                        <li>VM449:1 Dionei "tem" coisas para fazer</li>
+                        <br>
+                        <li>console.log(`Dionei "tem" coisas 'para' fazer`)</li>
+                        <li>VM532:1 Dionei "tem" coisas 'para' fazer</li>  
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Dados do tipo numerais
+                    <br>Podem ser inteiros (Integer) → 33
+                    <br>Reais, decimais ou float → 12.5
+                    <br>NaN → Not a Number
+                    <br>Infinito → INfinity
+                </td>
+                <td>
+                    <ul>
+                        <li>console.log(12) //Integer</li>
+                        <li>console.log(12.5) //float</li>
+                        <li>console.log(12 * 24 / 4) //calc</li>
+                        <li>console.log(Infinity) //INfinity</li>
+                        <li>console.log(50 + (53 * 4.5)) //</li>
+                        <li>console.log(Math.round(50 + (53 * 4.5))) //MAth</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td> Dados do tipo Boolean <br>Soment dois valores sendo <b>false</b> ou <b>true</b> <br> Foi criado por George Boolle</td>
+                <td>
+                    <ul>
+                        <li>console.log(50 < 23) //50 é menor que 23? false</li>
+                        <li>console.log(50 > 23) //50 é maior que 23? true</li>
+                        <li>console.log(50 == 50) //50 é igual a 50? true</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Dados do tipo indefinido e nulo (Undefined e null)
+                </td>
+                <td>
+                    <ul>
+                        <li>console.log(null === undefined) //false</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Dados do tipo objetos
+                    <br>
+                    </p>
+                </td>
+                <td>
+                    <ul>
+                        <li>console.log({
+                            <br>marca: 'FIAT', 
+                            <br>largura: '550cm',
+                            <br>peso: 1,
+                            <br>velocidade: (90 * 200) * 2,
+                            <br>andar: function () {
+                                <br>console.log('Sua velocidade é de 200')
+                                <br>},
+                            <br>possuiAr:true                    
+                            <br>});
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        Dados do tipo Vetores, Lista ou Array (meio que a mesma coisa). <br>
+                        A lista de <i>valores</i> que começa a contar do <i>zero</i> <br>
+                        É um agrupamento de dados.
+                    </p>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            console.log([
+                            <br>"Bolacha"
+                                <br>Refrigerante
+                                <br>Carne
+                                <br>Verduras
+                                <br> ])
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+    <!-- pode ser assim mas, creio eu, de preferência só em um caso muito pontual.
+        <script>
         console.log("Olha eu aqui no fim da página.")
     </script>
     -->
-<script src="./scripts.js"></script>
+<script src="./scripts.js"></script> <!-- impoertando o script -->
 
 </body>
 </html>
