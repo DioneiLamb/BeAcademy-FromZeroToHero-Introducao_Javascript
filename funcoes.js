@@ -1,10 +1,24 @@
-//funções ou métodos, como também é chmado, podem realizar uma rotina, uma ação
+/*
+funções ou métodos, como também é chmado, é um bloco de código que podem realizar uma rotina, uma ação ou tarefa especifica
+
+uma função JavaScript é executada quando "algo" a invoca (chama)
+
+uma função JavaScript é definida pela palavra chave "function" seguida de um nome, seguida por parenteses ()
+
+nome das funções podem conter letras, numeros, cifrões (seguindo os mesmos padrçoes das variaveis)
+
+dentro dos parenteses podem conter parametros separados por virgula (paramentro1, paramentro2, etc)
+
+o código executadopela função é colocado dentro das chave {}
+
+*/
+
 //exemplo 1
 function minha1Funcao(){
     //meu código vem aqui dentro
     console.log("Olha a fminha primeira função")
 }
-//pra minha função funcionar ela tem que ser executada
+//pra minha função funcionar, ela tem que ser invocada
 minha1Funcao()
 
 //exemplo 2 descrevemndo parametros e argumentos, que ficam entre o parenteses
@@ -38,3 +52,4 @@ const myFirstArrowFunction = (a, b) => { // devemos guradar a função dentro de
 }
 const resultado = myFirstArrowFunction(99, 15)
 console.log(resultado)
+

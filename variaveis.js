@@ -54,3 +54,39 @@ let nome5 = "Artur" // declarei 'globalmente'
     //let e const funcionam dentro de do scopo
 }
 console.log('meu nome aparece aqui?', nome5) //pega o valor da global
+
+// concatenar, interpolar valores
+const human = {
+    nome: "Julia Kafer",
+    idade: 38,
+    peso: 76,
+    isAthete: false,
+    walk: function walking(){
+        console.log('Eu caminho bastante!')
+    }
+} // esse objeto
+
+// assim fica concatenando tudo
+// Concatenar é juntar valores com o +
+console.log(" O humano " + human.nome + " tem a idade " + human.idade)
+
+// assim fica a interolação
+// interpolação é usar $ {objeto.chave}
+console.log(`O humano ${human.nome} tem a idade ${human.idade} `) //usado o ` (TIL pra abrir e fechar) / O conlole.log() vai trazer o valor da chave do objeto
+
+
+// trabalhando com array
+const animals = [
+    "Elefante", // posição 0 / tem qu lembrar de colocar a VIRGULA para separar os valores
+    "Gato", // posição 1
+    "Leão", //posição 2
+    { // isso tudo na posição 3
+        nombre: "Raimundo", // novamente lembrar de colocar a virgula
+        idade: 69,
+        peso: 120
+    }
+] // usado chaves para abrir e fechar um array
+
+console.log(animals) // assim eu mostro todos os valores dentro do array
+console.log(animals[2]) // assim eu mostro um só valor do array
+console.log(animals[3].nombre)

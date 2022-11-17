@@ -5,29 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta autor="Dionei Rogério Lamb">
-    <title>Javascript</title>
+    <title>Introdução ao JavaScript</title>
 </head>
 <body>
     
     <h1>O que é <i>JavaScript</i></h1><hr>
     <p>
-        <b><i>JavaScript</i></b> (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e funcional) que juntamente com <b><i>HTML</i></b> e <b><i>CSS</i></b>, é uma das três principais tecnologias da <b><i>World Wide Web</i></b>.
+        <b><i>JavaScript</i></b> (frequentemente abreviado como JS) é uma linguagem de programação interpretada e estruturada, executado diretamente no navegador do cliente, comumente utilizado no desenvolvimento web, que juntamente com <b><i>HTML</i></b> e <b><i>CSS</i></b>, é uma das três principais tecnologias da <b><i>World Wide Web</i></b>.
     </p>
     <p>        
         <b><i>JavaScript</i></b> permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-la.
     </p>
+
+    <h2>Vantagens do JavaScript</h2>
+    <p>
+        <ul>
+            <li>
+                Independentemente de onde você hospeda o JavaScript, ele sempre é executado no ambiente do cliente para economizar muita largura de banda e tornar o processo de execução mais rápido.
+            </li>
+            <li>
+                As empresas globais apóiam o desenvolvimento da comunidade criando projetos importantes. Um exemplo é o Google (criou a estrutura Angular) ou Facebook (criou a estrutura React.js)
+            </li>
+            <li>
+                Não é difícil começar a trabalhar em JavaScript. Por isso, muitas pessoas começam sua aventura no setor de TI aprendendo essa línguagem.                    
+            </li>
+            <li>
+                Existem muitos projetos de código aberto que fornecem uma ajuda útil na adição de JavaScript do desenvolvedor.
+            </li>
+            <li>
+                Entre outros...
+            </li>
+        </ul>
+    </p>
+
+    <h2>Desvantagens do JavaScript</h2>
+    <p>
+        <ul>
+            <li>
+                Pode ser difícil desenvolver aplicativos grandes, embora você também use a sobreposição de TypeScript.
+                Isso se aplica a projetos front-end maiores. A configuração costuma ser uma tarefa tediosa para a quantidade de ferramentas que precisam ser montadas para criar um ambiente para tal projeto. Geralmente, isso está diretamente associado à operação da biblioteca.
+            </li>
+            <li>
+                O principal problema ou desvantagem em JavaScript é que o código está sempre visível para qualquer pessoa que possa visualizar o código JavaScript.
+            </li>
+                <li>
+                Se o erro ocorrer no JavaScript, ele pode parar para renderizar todo o site. Os navegadores são extremamente tolerantes com erros de JavaScript.
+            </li>
+            <li>
+                Entre outros...
+            </li>
+        </ul>
+    </p>
+    <p>
+        Fonte: https://acervolima.com/vantagens-e-desvantagens-do-javascript/
+    </p>
     
     <h2>Boas práticas de codificação</h2>
     <p>
-        Como o <b><i>CSS</i></b>, os scripts escritos na linguagem <b><i>JavaScript</i></b>, podem ser esctritos dentro do corpoda páginas ou no cabeçalho, porém essa prática pode deixar a página mais <b>lenta</b> (pois o navegador começa a ler as informações de cima pra baixo) e o usuário não gosta de esperar.
-    </p>
-    <p>
-        O que podemos fazer é colocar esses scripts no <b><i>fim</i></b> da página, porém, o melhor seria colocar em um arquivo externo.
+        Como o <b><i>CSS</i></b>, os scripts escritos na linguagem <b><i>JavaScript</i></b>, podem ser esctritos dentro do corpoda páginas ou no cabeçalho, porém essa prática pode deixar a página mais <b>lenta</b> (pois o navegador começa a ler as informações de cima pra baixo) e o usuário não gosta de esperar. O que podemos fazer é colocar esses scripts no <b><i>fim</i></b> da página, porém, o melhor seria colocar em um arquivo externo.
     </p>
 
     <h2>Tipos de dados em JavaScript</h2>
     <p>
-        Para entender a sintaze é necessário seguir as regras de linguagem. A c ombinações de elementos e escrita, o conjunto de termos e expressões e os agrupamento de palavras.
+        Para entender a sintaze é necessário seguir as regras de linguagem. As combinações de elementos e escrita, o conjunto de termos e expressões e os agrupamento de palavras.
     </p>
     
     <!-- estilização da tabela colocada aqui só por preguiça de fazer um link externo =) -->
@@ -35,26 +75,27 @@
         table, tr, td{
             border:#000 solid 1px;
             padding:1rem;
-            width: 75%;
+            width: 100%;
         }
         td{
             width:50%;
             height:30px;
         }
         tr{
-            background-color:green;
-            color:#FFF;
+            background-color:lightgreen;
+            color:#000;
         }
     </style>
         <table>
             <tr>
                 <td>Dados do tipo string
                     <br>São cadeias de caracteres (textos)
-                    <b><i>Algumas regras especificas</i></b> tipo o uso das aspas
+                    <b><i>Algumas regras especificas</i></b> tipo o uso das aspas.
+                    <br><br>
                         " " aspas duplas NÃO podem conter aspas duplas dentro e SIM aspas simples
-                    <br>
+                    <br><br>
                         ' ' aspas simples simples podem conter aspas duplas dentro
-                    <br>
+                    <br><br>
                         ` ` crase pode conter tudo dentro, aspas simples e aspas duplas. Usado quando uma resposta muito longa. Pode quebrar as linhas com a crase.
                 </td>
                 <td>
@@ -82,12 +123,12 @@
                 </td>
                 <td>
                     <ul>
-                        <li>console.log(12) //Integer</li>
-                        <li>console.log(12.5) //float</li>
-                        <li>console.log(12 * 24 / 4) //calc</li>
-                        <li>console.log(Infinity) //INfinity</li>
-                        <li>console.log(50 + (53 * 4.5)) //</li>
-                        <li>console.log(Math.round(50 + (53 * 4.5))) //MAth</li>
+                        <li>console.log (12) // <b>Integer</b></li>
+                        <li>console.log (12.5) // <b>float</b></li>
+                        <li>console.log (12 * 24 / 4) // <b>calc</b></li>
+                        <li>console.log (Infinity) // <b>INfinity</b></li>
+                        <li>console.log (50 + (53 * 4.5))</li>
+                        <li>console.log (Math.round (50 + (53 * 4.5))) // <b>MAth</b></li>
                     </ul>
                 </td>
             </tr>
@@ -95,26 +136,39 @@
                 <td> Dados do tipo Boolean <br>Somente dois valores sendo <b>false</b> ou <b>true</b> <br> Foi criado por George Boolle</td>
                 <td>
                     <ul>
-                        <li>console.log(50 < 23) //50 é menor que 23? false</li>
-                        <li>console.log(50 > 23) //50 é maior que 23? true</li>
-                        <li>console.log(50 == 50) //50 é igual a 50? true</li>
+                        <li>console.log(50 < 23) //50 é menor que 23? <b>false</b></li>
+                        <li>console.log(50 > 23) //50 é maior que 23? <b>true</b></li>
+                        <li>console.log(50 == 50) //50 é igual a 50? <b>true</b></li>
                     </ul>
                 </td>
             </tr>
             <tr>
                 <td>
                     Dados do tipo indefinido e nulo (Undefined e null)
+                    <ul>
+                        <li>
+                            <b>valor undefined</b>
+                            valor primitivo utilizado quando uma variável não teve valor atribuído
+                        </li>
+                        <li>
+                        <b>valor null</b>
+                        valor primitivo que representa a ausência intencional de um valor de objeto
+                        </li>
+                    </ul>
                 </td>
                 <td>
                     <ul>
-                        <li>console.log(null == undefined) //false</li>
+                        <li>console.log(null == undefined) // <b>false</b></li>
                     </ul>
                 </td>
             </tr>
             <tr>
                 <td>
                     <p>
-                        Dados do tipo objetos
+                        Dados do tipo objetos armazenam:
+                        <br>→ Propriedades / Atributos
+                        <br>→ Funcionalidades / Métodos
+                        <br>{ propriedade: "valor"}
                     <br>
                     </p>
                 </td>
@@ -138,7 +192,7 @@
                 <td>
                     <p>
                         Dados do tipo Vetores, Lista ou Array (meio que a mesma coisa). <br>
-                        A lista de <i>valores</i> que começa a contar do <i>zero</i> <br>
+                        A lista de <i>valores</i> que começa a contar do <b><i>zero</i></b> <br>
                         É um agrupamento de dados.
                     </p>
                 </td>
@@ -146,11 +200,37 @@
                     <ul>
                         <li>
                             console.log([
-                            <br>"Bolacha"
-                                <br>Refrigerante
-                                <br>Carne
-                                <br>Verduras
+                            <br>"Bolacha" // <b>este é o valor 0 </b>
+                                <br>Refrigerante // <b>este é o valor 1 </b>
+                                <br>Carne // <b>este é o valor 2 </b>
+                                <br>Verduras // <b>este é o valor 3 </b>
                                 <br> ])
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Variaveis</b> são identificadores que reservam espaços da memória para receber valores.
+                    <br>São um nome, identificação ou apelido para algum valor.
+                    utiliza espaços da memória ram para armazenar informações.
+                    <br>Estes valores podem variar de a cordo com o tempo ou podem ser constantes
+                    <b>Usam palavras reservadas para construir uma variavel</b>
+                    <br>
+                </td>
+                <td>
+                    <ul>
+                        <li>
+                            <b>var</b>
+                            pode sofrer mudanças de valor no decorer do código
+                        </li>
+                        <li>
+                            <b>let</b>
+                            variavel que pode sofrer mudanças de valor ao longo do código, geralmente é usado dentro de um escopo (bloco de código)
+                        </li>
+                        <li>
+                            <b>const</b>
+                            tem o valor imutável, não pode receber outro valor, é fixo por todo o código
                         </li>
                     </ul>
                 </td>
@@ -164,8 +244,8 @@
     -->
 <!-- importando o script -->
 <!-- <script src="./scripts.js"></script> primeiras 3 aulas  -->
-<!--<script src="./variaveis.js"></script>   aula das variaveis -->
+<script src="./variaveis.js"></script>   aula das variaveis
 <!-- <script src="./praticando_variaveis.js"></script> -->
-<script src="./funcoes.js"></script>
+<!-- <script src="./funcoes.js"></script> -->
 </body>
 </html>
